@@ -24,7 +24,7 @@ function makeCircles() {
 }
 
 function drawCircles() {
-  var allCircles = svg.selectAll('.pieces').data(makeCircles())
+  var allCircles = svg.selectAll('circle.pieces').data(makeCircles())
   allCircles.transition().duration(1000)
     .attr('cx', function(c){return c.cx})
     .attr('cy', function(c){return c.cy})
@@ -32,7 +32,6 @@ function drawCircles() {
 
   var piecesEnter = allCircles.enter().append('circle')
   piecesEnter.classed('pieces', true)
-  //piecesEnter.attr('r', function(c){return c.r})
   piecesEnter.attr('r', 0)
   piecesEnter.attr('cx', function(c){return c.cx})
   piecesEnter.attr('cy', function(c){return c.cy})
@@ -41,15 +40,6 @@ function drawCircles() {
   })
   
   allCircles.exit().transition().duration(1000).attr('r', 0).remove()
-
-  //allCircles.attr('r', function(c){return c.r})
 }
 setInterval(drawCircles, 1000)
 drawCircles()
-/*
-piecesEnter.transition().duration(function(c, i){
-  return 200*i
-}).attr('cy', function(c) {
-  return c.r
-})
-*/
