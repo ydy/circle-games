@@ -3,3 +3,30 @@
   stroke: yellow;
   stroke-width: 2px;
 }
+
+button {
+  background-color:  lightblue;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px;
+}
+#game {
+  position: relative;
+}
+#gameover {
+  position: absolute;
+  transition-property: all;
+  transition-duration: .2s;
+  top: 0px;
+  left: 200px;
+  opacity: 0;
+}
+#gameover.finish {
+  top: 150px; left: 200px;
+  transition-duration: 2s;
+  opacity: 1;
+}
