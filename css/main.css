@@ -1,9 +1,9 @@
 .pieces {
   fill: red;
   stroke: yellow;
-  stroke-width: 2px;
+  stroke-width: 0px;
 }
-
+/* position relative vs absolute helper http://jsfiddle.net/7WZeV/ */
 button {
   background-color:  lightblue;
   -moz-border-radius: 5px;
